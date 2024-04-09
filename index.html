@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de la Oca</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Juego de la Oca</h1>
+        <label for="playerSelect">Número de jugadores:</label>
+        <select id="playerSelect" onchange="nuevosJugadores()">
+            <option value="2">2 Jugadores</option>
+            <option value="3">3 Jugadores</option>
+            <option value="4">4 Jugadores</option>
+        </select>
+        <div id="turnoMensaje">Turno del jugador: </div>
+
+        <div id="playerFichasSelection">
+            <!-- Los selectores de fichas se generarán dinámicamente aquí -->
+        </div>
+        <div id="startButton"><button id="startGameButton" onclick="iniciarJuegoConFichas()">Comenzar Partida</button></div>
+        <!-- Aquí irán los inputs para la selección de las fichas -->
+      
+
+
+        <div id="boardContainer">
+            <img src="./media/Tablero.jpg" id="gameBoard" alt="Tablero del Juego de la Oca">
+           
+            <div id="fichas"></div>
+        </div>
+        
+        <!-- Botones para tirar el dado y reiniciar el juego -->
+        <button id="rollDiceButton" onclick="lanzarDado()">Tirar Dado</button>
+        <button id="resetGameButton" onclick="reiniciar()">Reiniciar Partida</button>
+        
+        
+        <!-- Área para mostrar el resultado del dado -->
+        <div id="mensaje"></div>
+        <div id="diceResult">
+            <img class="img1" src="./media/Dados/dice6.png">
+
+        </div>
+        
+        <!-- Tabla de resultados -->
+        <table id="resultsTable">
+            <!-- Los resultados se llenarán dinámicamente -->
+        </table>
+    </div>
+    
+    <!-- Enlace al archivo JavaScript -->
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

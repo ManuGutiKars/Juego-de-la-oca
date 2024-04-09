@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+#gameContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#turnoMensaje {
+    font-size: 2em;
+}
+#boardContainer {
+    position: relative;
+    margin: 20px auto;
+}
+
+#gameBoard {
+    max-width: 100%;
+    border: 1px solid #ddd;
+}
+
+#playerSelect,
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+#resultsTable {
+    display:flex;
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultsTable th,
+#resultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+
+/* Estilos para las imágenes de las fichas de los jugadores */
+.jugador {
+    position: absolute;   
+    width: 50px; /* Ancho de la ficha, ajústalo según sea necesario */
+    height: 50px; /* Alto de la ficha, ajústalo según sea necesario */
+    transition: all 0.5s ease;
+}
+
+#startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#startGameButton {
+    display: none;
+}
+#mensaje {
+    color: darkolivegreen;
+    font-size: 3em;   
+    font-family: Arial;
+    font-weight: bolder;
+
+}
+#tokenSelection {
+    max-width: 50px;
+    max-height: 50px;
+}
+.ficha-seleccion {
+    cursor: pointer;
+    transition: transform 0.2s; /* Animación para suavizar el cambio de tamaño */
+    width: 50px; /* Ajusta el ancho a tu preferencia */
+    height: 50px; /* Ajusta la altura a tu preferencia */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.ficha-seleccion.selected {
+    transform: scale(1.1); /* Hacer la imagen un poco más grande al seleccionar */
+    border: 3px solid #000; /* Agregar un borde para resaltar la selección */
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    color: plum;
+}

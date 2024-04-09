@@ -117,14 +117,16 @@ function nuevosJugadores() {//Función para iniciar la selección de fichas seg�
 }
 
 
-function lanzarDado() {// función para lanzar el dado
+function lanzarDado(indiceJugador) {
+    // Solo el jugador actual puede lanzar el dado
+    if (indiceJugador !== jugadorActual) return;
+
     var randomNumber = Math.floor(Math.random() * 6) + 1;
     var randomDiceImage = "dice" + randomNumber + ".png";
     var randomImageSource = "./media/Dados/" + randomDiceImage;
     document.querySelector(".img1").setAttribute("src", randomImageSource);
 
-    // Mover al jugador basado en el dado lanzado y decidir quién es el siguiente
-    moverJugador(jugadorActual, randomNumber);
+    moverJugador(indiceJugador, randomNumber);
 }
 function reiniciar() {// Restablece la posición, el estado activo y la posición de llegada de cada jugador
     jugadores.forEach(jugador => {
@@ -252,6 +254,12 @@ function actualizarMensajeTurno(numeroJugador) {//Muestra de que jugador es el t
     const mensajeTurno = document.getElementById("turnoMensaje");
     mensajeTurno.style.display = 'block';
     mensajeTurno.textContent = `Turno del jugador ${numeroJugador}.`;
+    for (let i = 1; i <= jugadores.length; i++) {
+        document.getElementById(`botonJugador${i}`).style.display = 'none';
+    }
+
+    // Mostrar solo el botón del jugador actual
+    document.getElementById(`botonJugador${numeroJugador}`).style.display = 'inline';
 }
 
 

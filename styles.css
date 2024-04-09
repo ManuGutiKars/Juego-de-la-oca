@@ -103,3 +103,28 @@ h1 {
     font-size: 3em;
     color: plum;
 }
+#botonesLanzarDado {
+    position:relative
+}
+#botonJugador1 {
+    position: absolute; 
+    bottom: 450px;
+    left: 120px;
+}
+
+#botonJugador2 {
+    position: absolute;
+    bottom: 450px;
+    right: 120px;
+}
+
+#botonJugador3 {
+    position: absolute;
+    
+    left: 120px;
+}
+
+#botonJugador4 {
+    position: absolute;
+    right: 120px;
+}

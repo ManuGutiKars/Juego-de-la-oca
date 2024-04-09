@@ -31,8 +31,13 @@
             <div id="fichas"></div>
         </div>
         
-        <!-- Botones para tirar el dado y reiniciar el juego -->
-        <button id="rollDiceButton" onclick="lanzarDado()">Tirar Dado</button>
+        <!-- Botones para tirar el dado para cada jugador y reiniciar el juego -->
+        <div id="botonesLanzarDado">
+            <button id="botonJugador1" onclick="lanzarDado(0)" style="display:none;">Lanzar Dado Jugador 1</button>
+            <button id="botonJugador2" onclick="lanzarDado(1)" style="display:none;">Lanzar Dado Jugador 2</button>
+            <button id="botonJugador3" onclick="lanzarDado(2)" style="display:none;">Lanzar Dado Jugador 3</button>
+            <button id="botonJugador4" onclick="lanzarDado(3)" style="display:none;">Lanzar Dado Jugador 4</button>
+        </div>
         <button id="resetGameButton" onclick="reiniciar()">Reiniciar Partida</button>
         
         
